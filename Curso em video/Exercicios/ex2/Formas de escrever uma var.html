@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var</title>
+</head>
+<body>
+    <img src="Formatando string.png" alt=""><br>
+    <script>
+        var nr1 = Number.parseFloat(prompt("Escreva um numero:"))
+        var nr2 = Number.parseFloat(prompt("Escreva outro numero:"))
+        var s = nr1 + nr2
+        alert(s)
+        document.write("Minha soma deu s <br>")
+        document.write(`Minha soma deu ${s}<br>`)
+        const s1 = `Minha soma deu ${s}<br>`
+        document.write(s1)
+    </script>     
+</body>
+</html>

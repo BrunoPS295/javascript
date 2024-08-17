@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numeros</title>
+</head>
+<body>
+    <img src="Formatando numeros.png" alt=""><br>
+    <script>
+        var n1 = 12123.5
+        document.writeln(n1,"<br>")
+        document.writeln(n1.toFixed(4),"<br>")
+        document.writeln(n1.toFixed(2).replace('.', ','),"<br>")
+        document.writeln(n1.toLocaleString('pt-BR',{style:'currency',currency:'brl'}),"<br>")      
+        document.writeln(n1.toLocaleString('pt-BR',{style:'currency',currency:'eur'}))  
+    </script>
+</body>
+</html>
