@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            display:block;
+            background-color: black;
+            color: white;
+        }
+        img{
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <img src="Arvore_dom.png" alt="">
+    <p>O DOM serve para extrair dados dentro do codigo <br> Ex: </p>
+    <div id="b"> Alguma coisa</div>
+    <script>
+        //O 'getElemnts' pode ser utilizado para selecionar por nome, id, class e por seletor
+        var pp1 = window.document.getElementsByTagName('p') [0]
+        //Esta copiando o 'p'
+        window.document.write('Esta copiando o p acima: ' + pp1.innerText,'<br>')
+        window.document.write('Esta copiando a URL: ' + document.URL,'<br>')
+        //Isto é um seletor
+        var d = document.querySelector('div#b')
+        //Alterando o var d abaixo eu automaticamnte altero a div com id b
+        d.innerText = 'Hello world'
+        
+    </script>
+</body>
+</html>
