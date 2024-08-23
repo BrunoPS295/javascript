@@ -13,12 +13,29 @@
         img{
             align-items: flex-end;
         }
+        #d{
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: blueviolet;
+        }
+        #resultado{
+            width: max-content;
+            line-height: 25px;
+            text-align: center;
+            font: bold 20px Arial;
+            border: 2px solid white ;
+            margin-top: 5px;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    
     <img src="Arvore_dom.png" alt="">
-    <p>O DOM serve para extrair dados dentro do codigo <br> Ex: </p>
-    <div id="b"> Alguma coisa</div>
+    <p>O DOM serve para extrair dados dentro do codigo <br> Ex: </p> 
+    <div id="d"> Alguma coisa</div>
     <script>
         //O 'getElemnts' pode ser utilizado para selecionar por nome, id, class e por seletor
         var pp1 = window.document.getElementsByTagName('p') [0]
@@ -26,10 +43,42 @@
         window.document.write('Esta copiando o p acima: ' + pp1.innerText,'<br>')
         window.document.write('Esta copiando a URL: ' + document.URL,'<br>')
         //Isto é um seletor
-        var d = document.querySelector('div#b')
+        var d = document.querySelector('p')
         //Alterando o var d abaixo eu automaticamnte altero a div com id b
-        d.innerText = 'Hello world'
-        
+        d.innerText = 'O DOM serve para extrair dados dentro do codigo Ex: '
+        //Funções
+        var a = document.getElementById('d')
+        a.innerText = 'clique aqui'
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseleave', saiu)
+        function clicou(){  
+            a.innerText = 'clicou'
+        }
+        function entrou(){
+            a.style.background = 'blue'
+        }
+        function saiu(){
+            a.innerText = 'Alguma coisa'
+            a.style.background ='blueviolet'
+        }
+        //Somando
+        function clique(){
+            var resultado = document.getElementById('resultado')
+            var nr1 = document.getElementById('nr1')
+            var nr2 = document.getElementById('nr2')
+            var n1 = Number(nr1.value)
+            var n2 = Number(nr2.value)
+            var s = n1 + n2
+            resultado.innerHTML = `Resultado:${s}`
+        }
     </script>
+    <h1>Soma de dois valores</h1>
+    <input id="nr1" type="number">
+    +
+    <input id="nr2" type="number">
+    <input type="button" value="somar" onclick="clique()">
+    <div id="resultado">Resultado:</div>
+
 </body>
 </html>
