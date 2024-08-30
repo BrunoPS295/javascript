@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Condições aninhadas</h1>
+    <p>Detecta quantos algarismos tem através de if e else</p>
+    <input type="number" id="nr1">
+    +
+    <input type="number" id="nr2">
+    <button onclick="botao()" id="botao"> Calcular</button><br>
+    <div id="resultado">Nada</div>
+    <script>
+        function botao(){
+            var r = document.getElementById('resultado')
+            var nr1 = document.getElementById('nr1')
+            var nr2 = document.getElementById('nr2')
+            var n1 = Number(nr1.value)
+            var n2 = Number(nr2.value)
+            var s = n1 + n2
+            if (s < 10){
+                r.innerHTML = 'unidade'
+            }else{
+                if(s < 100){
+                    r.innerHTML = 'dezena'
+                }else{
+                    if(s < 1000){
+                    r.innerHTML = 'centena'
+                    }else{
+                        r.innerHTML = 'grande pacas'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

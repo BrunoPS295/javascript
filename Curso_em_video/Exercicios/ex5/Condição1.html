@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificação de multa</h1>
+    Velocidade: <input type="number" id="ivel" name="vel"><br>
+    <button onclick="verify()">Verificar</button><br>
+    <script>  
+        function verify(){
+            var n = document.getElementById('ivel')
+            var vel = Number(n.value)
+            if(vel > 60){
+                window.alert('Multado')
+            }else{
+                window.alert('Use o cinto')
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
