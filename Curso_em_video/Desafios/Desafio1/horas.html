@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas são?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 id="bom"></h1>
+        <p id="hora"></p>
+        <img id="iimg" src="" alt="">
+    </main>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var bom = document.getElementById('bom')
+        var phora = document.getElementById('hora')
+        var dia = "Imagens/dia.jpg"
+        var tarde = "Imagens/tarde.jpg"
+        var noite = "Imagens/noite.jpg"
+        //Estrutura condicional do bom
+        if(hora > 6 && hora < 12){
+            bom.innerHTML = 'Bom dia'
+            phora.innerHTML = `Agora são ${hora}h`
+            document.getElementById('iimg').src = dia
+        }else if(hora > 12 && hora < 20){
+            bom.innerHTML = 'Boa tarde'
+            phora.innerHTML = `Agora são ${hora}h`
+            document.getElementById('iimg').src = tarde
+        }else{
+             bom.innerHTML = 'Boa noite'
+             phora.innerHTML = `Agora são ${hora}h`
+             document.getElementById('iimg').src = noite
+        }
+    </script>
+</body>
+</html>

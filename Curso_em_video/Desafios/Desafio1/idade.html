@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Descubra a sua idade!</h1>
+        <p>Digite o ano em que nasceu: <input id="inasceu" type="number"></p>
+        <button onclick="sla()">Calcular</button><br><br>
+        <p id="ires"></p>
+        <p id="isite"></p>
+    </main>
+    <script>
+        var agora = new Date()
+        var ano = agora.getFullYear()
+        var site = document.getElementById('isite')
+        var idade_site = ano - 2024
+        site.innerHTML = `Este site tem ${idade_site} anos`
+        function sla(){
+            var res = document.getElementById('ires') 
+            var nasceu = parseInt(document.getElementById('inasceu').value)
+            var idade = ano - nasceu
+            if(nasceu > ano){
+                alert('Erro, coloque um ano valido.')
+            }else{
+                res.innerHTML = `Você tem ${idade} anos.`
+            }
+        }
+        
+    </script>
+</body>
+</html>
