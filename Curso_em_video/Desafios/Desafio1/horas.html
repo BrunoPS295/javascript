@@ -25,14 +25,17 @@
             bom.innerHTML = 'Bom dia'
             phora.innerHTML = `Agora são ${hora}h`
             document.getElementById('iimg').src = dia
+            document.body.style.backgroundColor = "lightblue";
         }else if(hora > 12 && hora < 20){
             bom.innerHTML = 'Boa tarde'
             phora.innerHTML = `Agora são ${hora}h`
             document.getElementById('iimg').src = tarde
+            document.body.style.backgroundColor = "orange";
         }else{
              bom.innerHTML = 'Boa noite'
              phora.innerHTML = `Agora são ${hora}h`
              document.getElementById('iimg').src = noite
+             document.body.style.backgroundColor = "black";
         }
     </script>
 </body>
