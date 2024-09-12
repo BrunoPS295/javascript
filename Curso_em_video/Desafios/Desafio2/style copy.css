@@ -1,0 +1,67 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: aquamarine;
+    width: 98vw;
+    height: 98vh;
+    font-size: 20px;
+}
+header{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+}
+
+#icalc{
+    display: block;
+    width: 399px;
+    height: 30px;
+    margin: auto;
+}
+
+main{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 700px;
+    height: 700px;
+    background-color: white;
+}
+
+section{
+    margin: 20px 0px 0px 20px;
+}
+
+section > p{
+    font-size: large;
+}
+
+section > p > input{
+    width:30%;
+}
+
+#ires{
+    height: 25px;
+}
+
+footer{
+    position: relative; 
+    top: 10px;
+}
+
+footer > p{
+    text-align: center;
+    font-size: larger;
+}
+
+

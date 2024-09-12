@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando em passos</title>
+    <link rel="stylesheet" href="style copy.css">
+</head>
+<body>
+    <header>
+        <h1>Contando de forma demente</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Inicio: <input id="iinicio" type="number"></p>
+        </section>
+        <section>
+            <p>Fim: <input id="ifim" type="number"></p>
+        </section>
+        <section>
+            <p>Passo: <input id="ipasso" type="number"></p>
+        </section>
+        <section>
+            <div id="ires">Resultado:</div>
+        </section>
+        <section>
+            <input onclick="icalc()" id="icalc" type="button" value="Calcular">
+        </section>    
+    </main>
+
+    <footer>
+        <p>Feito por Bruno</p>
+    </footer>
+
+    <script>
+        
+        
+        function icalc(){
+            var inicio = parseInt(document.getElementById('iinicio').value);
+            var fim = parseInt(document.getElementById('ifim').value);
+            var passo = parseInt(document.getElementById('ipasso').value);
+            var ires = (document.getElementById("ires"))
+
+            while (inicio <= fim){
+                ires.innerText += inicio + '...'
+                inicio += passo
+           }
+
+        }
+    </script>
+</body>
+</html>

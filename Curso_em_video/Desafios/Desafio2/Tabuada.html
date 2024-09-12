@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style copy.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <section>
+            <p>Digite um numero: <input id="inr1" type="number"><button id="ibotao" onclick="calculo()">Calcular</button></p>
+        </section>
+        <section>
+            <select name="res" id="res" size="10"></select>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por Bruno</p>
+    </footer>
+    <script>
+        function calculo(){
+            var nr1 = document.getElementById("inr1");
+            var n1 = Number(nr1.value)
+            var botao = document.getElementById("ibotao")
+            var res = document.getElementById("res")
+            res.innerHTML = '';
+            if(n1 <= 0 || nr1.value.length == 0){
+                window.alert ('Coloque um valor valido')
+            }else{
+                for(c = 1; c <= 10; c++){
+                    let item = document.createElement('option')
+                    item.text = `${n1} x ${c} = ${n1 * c}`
+                    res.add(item);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
