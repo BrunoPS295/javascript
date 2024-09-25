@@ -28,7 +28,7 @@ h1{
 main{
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
     display: block;
     border-radius: 10px;
@@ -51,12 +51,9 @@ section > p > input{
 }
 
 select{
-    width: 200px;
+   width: 200px; 
 }
 
-#ires{
-    height: 25px;
-}
 
 footer{
     position: relative; 
