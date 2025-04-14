@@ -33,8 +33,9 @@ main{
     display: block;
     border-radius: 10px;
     border: 1px solid black;
-    width: 50vw;
-    height: 60vh;
+    max-width: 700px;
+    width: 80vw;
+    height: 70vh;
     background-color: white;
 }
 
@@ -51,7 +52,7 @@ section > p > input{
 }
 
 select{
-   width: 200px; 
+   width: 60%; 
 }
 
 
@@ -63,6 +64,16 @@ footer{
 footer > p{
     text-align: center;
     font-size: larger;
+}
+
+@media (max-width:1000px) {
+    section > p{
+        font-size: medium;
+    }
+    main{
+        height: 80vh;
+
+    }
 }
 
 
