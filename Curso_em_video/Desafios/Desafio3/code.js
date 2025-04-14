@@ -24,12 +24,12 @@ function calcular(){
 
     conj.sort()
     let textos = [
-        `O conjunto tem os seguintes numeros ${conj} em ordem crescente`,
-        `O conjunto tem ${i} numeros `,
-        `O maior numero é ${conj[i-1]}`,
-        `O menor numero é ${conj[0]}`,
+        `O conjunto tem os seguintes números ${conj} em ordem crescente`,
+        `O conjunto tem ${i} número(s) `,
+        `O maior número é ${conj[i-1]}`,
+        `O menor número é ${conj[0]}`,
         `A soma dos valores é ${soma}`,
-        `A media dos valores é ${soma/i}`
+        `A média dos valores é ${soma/i}`
     ]
     
     for(t=0;t<textos.length;t++){
