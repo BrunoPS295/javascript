@@ -71,8 +71,20 @@ footer > p{
         font-size: medium;
     }
     main{
-        height: 80vh;
+        height: 70vh;
 
+    }
+    footer{
+        top: 35px;
+    }
+    select{
+        width: 80%;
+    }
+}
+
+@media (max-width:400px) {
+    footer{
+        top: 100px;
     }
 }
 
